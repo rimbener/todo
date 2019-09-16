@@ -1,0 +1,12 @@
+<rim-header-menu [topMenuUrl]="TOPMENU_URL">
+    <span *ngIf="isMobile">Busqueda Avanzada</span>
+</rim-header-menu>
+
+<ion-content>
+    <main [class]="mainClass">
+        <app-todo-search-filter (search)="onSearch($event)"></app-todo-search-filter>
+        <app-todo-list [todoList]="todoList$ | async" (stateChange)="onStateChange()"
+            (editClick)="onEditClick($event)">
+        </app-todo-list>
+    </main>
+</ion-content>

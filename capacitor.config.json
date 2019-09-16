@@ -1,0 +1,7 @@
+{
+  "appId": "app.web.rimtodo",
+  "appName": "ToDo",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www"
+}

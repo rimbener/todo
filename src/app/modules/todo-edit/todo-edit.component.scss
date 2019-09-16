@@ -1,0 +1,10 @@
+:host {
+    justify-content: flex-start
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 8px;
+    margin-top: 32px;
+}

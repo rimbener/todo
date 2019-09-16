@@ -1,0 +1,11 @@
+<ion-fab *ngIf="!isMobile" vertical="top" horizontal="end" slot="fixed" edge="true" style="margin-right: 72px">
+  <ion-fab-button>
+    <ion-icon [name]="icon"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-fab *ngIf="isMobile" vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button>
+    <ion-icon [name]="icon"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

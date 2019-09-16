@@ -1,0 +1,14 @@
+<rim-ion-loader></rim-ion-loader>
+<ion-app>
+  <ion-menu type="overlay" side="start" slot="start">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>ToDo Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <rim-side-menu [url]="SIDEMENU_URL"></rim-side-menu>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+</ion-app>

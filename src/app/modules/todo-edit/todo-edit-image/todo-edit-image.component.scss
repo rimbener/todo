@@ -1,0 +1,14 @@
+img {
+    max-height: 50vh;
+    width: auto;
+    margin: auto;
+}
+
+#remove-image-button {
+    margin: 0 8px;
+    opacity: 0.5;
+}
+
+#remove-image-button:hover {
+    opacity: 1;
+}

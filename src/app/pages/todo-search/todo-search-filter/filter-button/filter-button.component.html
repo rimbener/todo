@@ -1,0 +1,12 @@
+<ng-container *ngIf="hidden; then hideFilter; else showFilter">
+</ng-container>
+<ng-template #hideFilter>
+  <ion-button color="light" expand="full" (click)="toggleFilter()">Mostrar filtros de búsqueda
+    <ion-icon name="arrow-down" slot="end"></ion-icon>
+  </ion-button>
+</ng-template>
+<ng-template #showFilter>
+  <ion-button color="light" expand="full" (click)="toggleFilter()">Ocultar filtros de búsqueda
+    <ion-icon name="arrow-up" slot="end"></ion-icon>
+  </ion-button>
+</ng-template>

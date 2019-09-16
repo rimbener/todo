@@ -1,0 +1,32 @@
+<form [formGroup]="searchForm" (keyup.enter)="onSearch()">
+  <ion-list>
+    <ion-item>
+      <ion-label position="stacked">ID</ion-label>
+      <ion-input placeholder="Ingrese el ID a buscar" formControlName="id" type="number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Texto</ion-label>
+      <ion-input placeholder="Ingrese texto a buscar" formControlName="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-list>
+        <ion-list-header>
+          <ion-label>Estado del ToDo</ion-label>
+        </ion-list-header>
+        <ion-item>
+          <ion-label>Resuelto</ion-label>
+          <ion-checkbox slot="start" value="true" formControlName="resolved"></ion-checkbox>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Pendiente</ion-label>
+          <ion-checkbox slot="start" value="false" formControlName="unresolved"></ion-checkbox>
+        </ion-item>
+      </ion-list>
+    </ion-item>
+    <ion-button expand="block" (click)="onSearch()">
+      Buscar
+      <ion-icon name="search"></ion-icon>
+    </ion-button>
+  </ion-list>
+</form>

@@ -1,0 +1,13 @@
+app-todo-list {
+    flex: 1;
+}
+
+.mainOnMobile {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainOnDesktop {
+    display: flex;
+    flex-direction: row;
+}

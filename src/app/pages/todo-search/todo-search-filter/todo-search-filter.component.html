@@ -1,0 +1,10 @@
+<ng-container *ngIf="isMobile; then mobile; else desktop"></ng-container>
+
+<ng-template #mobile>
+  <app-filter-button [hidden]="hidden" (toggleVisibility)="onToggleVisibility($event)"></app-filter-button>
+  <app-todo-search-form [hidden]="hidden" (search)="onSearch($event)"></app-todo-search-form>
+</ng-template>
+
+<ng-template #desktop>
+  <app-todo-search-form (search)="onSearch($event)"></app-todo-search-form>
+</ng-template>

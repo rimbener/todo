@@ -1,0 +1,11 @@
+<rim-header-menu [topMenuUrl]="TOPMENU_URL">
+  <ion-searchbar *ngIf="isMobile" placeholder="Buscar pendientes" debounce="300" [(ngModel)]="title"></ion-searchbar>
+</rim-header-menu>
+
+<ion-content>
+  <ion-searchbar *ngIf="!isMobile" placeholder="Buscar" debounce="300" [(ngModel)]="title"></ion-searchbar>
+  <app-todo-list [todoList]="todoList$ | async | filter:title" (stateChange)="onStateChange()"
+    (editClick)="onEditClick($event)">
+  </app-todo-list>
+  <app-main-fab-button slot="fixed" [icon]="'add'" (click)="onAddClick()"></app-main-fab-button>
+</ion-content>

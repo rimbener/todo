@@ -1,0 +1,19 @@
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  left: calc((100vw - 200px) / 2);
+  top: calc((100vh - 300px) / 2);
+  border-radius: 50%;
+  border: 20px solid var(--ion-color-light);
+  border-top-color: var(--ion-color-primary);
+  animation: spinner .8s linear infinite;
+}

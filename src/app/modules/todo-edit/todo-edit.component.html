@@ -1,0 +1,25 @@
+<rim-header-back-button *ngIf="isMobile" (click)="onDismiss()"></rim-header-back-button>
+
+<ion-card style="overflow: auto">
+  <app-todo-edit-image [todo]="todo" (imageSelected)="onImageSelected($event)"></app-todo-edit-image>
+  <ion-card-header>
+    <ion-card-subtitle>
+      <span *ngIf="todo?.id; else newTodo">Modificación del ToDo {{todo.id}} </span>
+      <ng-template #newTodo>
+        <span>Nuevo ToDo</span>
+      </ng-template>
+    </ion-card-subtitle>
+    <ion-card-title>
+      <ion-item>
+        <ion-label position="stacked">ToDo</ion-label>
+        <ion-input #titleInput [value]="todo?.title" autofocus="true" placeholder="Ingrese aquí el nuevo ToDo"
+          (keyup.enter)="onSubmit(titleInput.value)">
+        </ion-input>
+      </ion-item>
+    </ion-card-title>
+  </ion-card-header>
+  <div class="button-container">
+    <ion-button color="light" (click)="onDismiss()">Cancelar</ion-button>
+    <ion-button [disabled]="titleInput.value === ''" (click)="onSubmit(titleInput.value)">Guardar</ion-button>
+  </div>
+</ion-card>

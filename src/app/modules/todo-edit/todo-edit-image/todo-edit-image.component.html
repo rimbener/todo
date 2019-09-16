@@ -1,0 +1,6 @@
+<img *ngIf="imageSrc" [src]="imageSrc" />
+<app-file-picker (imageSelected)="onImageSelected($event)">
+  <ion-button id="remove-image-button" (click)="removeImage()" color="light" *ngIf="imageSrc">
+    <ion-icon name="trash"></ion-icon>
+  </ion-button>
+</app-file-picker>
