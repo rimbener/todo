@@ -1,4 +1,5 @@
-## Para correr el back y fron end en local:
+This was a project I make as a test, it's not fully tested nor completed.
+## To run back and front end locally:
 ```
 git clone https://github.com/rimbener/todo.git
 
